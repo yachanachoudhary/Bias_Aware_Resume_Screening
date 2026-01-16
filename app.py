@@ -8,7 +8,7 @@ from sklearn.linear_model import LogisticRegression
 # PAGE CONFIG
 # -------------------------------------------------
 st.set_page_config(page_title="Bias-Aware Resume Screening", layout="wide")
-st.title("🧠 Bias-Aware Resume Screening System")
+st.title(" Bias-Aware Resume Screening System")
 st.caption("Fair candidate screening using skills-based evaluation")
 
 # -------------------------------------------------
@@ -20,7 +20,7 @@ def load_data():
 
 df = load_data()
 
-st.subheader("📂 Original Dataset")
+st.subheader(" Original Dataset")
 st.dataframe(df.head())
 
 # -------------------------------------------------
@@ -69,7 +69,7 @@ ranked_df = df_fair.sort_values(
 # -------------------------------------------------
 # DISPLAY RESULTS
 # -------------------------------------------------
-st.subheader("🏆 Fair Resume Ranking")
+st.subheader(" Fair Resume Ranking")
 
 st.dataframe(
     ranked_df[
@@ -87,7 +87,7 @@ st.dataframe(
 # -------------------------------------------------
 # INTERACTIVE FILTER
 # -------------------------------------------------
-st.subheader("🔍 Filter Top Candidates")
+st.subheader(" Filter Top Candidates")
 
 top_n = st.slider("Select Top N Candidates", 1, len(ranked_df), 5)
 
@@ -106,4 +106,5 @@ st.dataframe(
 # -------------------------------------------------
 # FOOTER
 # -------------------------------------------------
-st.success("✅ Screening completed without using biased attributes.")
+st.success("Screening completed without using biased attributes.")
+
